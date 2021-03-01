@@ -1,24 +1,12 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+* Activity 1 : Create a blog app without the use of scaffolding
 
-Things you may want to cover:
+* Activity 2: create mini test for model
 
-* Ruby version
+* Activity 3: create mini test for controllers
 
-* System dependencies
+* Activity 4: create new model & nested resource
 
-* Configuration
+* Activity 5: deploy app to heroku
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...

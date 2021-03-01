@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Branch</th>
+            <th>Description</th>
+            <th colspan="4"></th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <% @specializations.each do |specialization| %>
+            <tr>
+                <td><%= specialization.id %></td>
+                <td><%= specialization.branch %></td>
+                <td><%= specialization.description %></td>
+            </tr>
+        <% end %>
+    </tbody>
+</table>
+
+<%= link_to 'Add Branch', new_engineering_specialization_path(@engineering) %>
+<%= link_to 'Return', engineerings_path %>

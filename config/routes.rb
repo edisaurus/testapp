@@ -1,3 +1,6 @@
 Rails.application.routes.draw do
-  root 'application#hello'
+  root "engineerings#index"
+  resources :engineerings do
+    resources :specializations
+  end
 end

@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Blog about Engineering</h1>
+
+<table>
+    <thead>
+        <th>Subject</th>
+        <th>Description</th>
+        <th>Units</th>
+        <th>Seasonal</th>
+        <th colspan="4"></th>
+    </thead>
+
+    <tbody>
+        <% @engineerings.each do |engineering| %>
+            <tr>
+                <td><%= engineering.subject %></td>
+                <td><%= engineering.description %></td>
+                <td><%= engineering.units %></td>
+                <td><%= engineering.seasonal %></td>
+
+                <td><%= link_to 'Show', engineering %></td>
+                <td><%= link_to 'Edit', edit_engineering_path(engineering) %></td>
+                <td><%= link_to 'Destroy', engineering, method: :delete, data: { confirm: 'Remove subject?'} %></td>
+            </tr>
+        <% end %>
+    </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Subject', new_engineering_path %>

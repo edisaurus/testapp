@@ -1,0 +1,28 @@
+<%= form_with model: [@engineering, @specialization], local: true do |f| %>
+    <p>
+        <% if @specialization.errors.any? %>
+            <ul>
+                <% @specialization.errors.full_messages.each do |message| %>
+                    <li><%= message %></li>
+                <% end %>
+            </ul>
+        <% end %>
+    <p>
+
+    <div>
+        <%= f.label :branch %>
+        <%= f.text_field :branch %>
+    </div>
+
+    <div>
+        <%= f.label :description %>
+        <%= f.text_area :description %>
+    </div>
+
+    <div>
+        <%= f.submit "save" %>
+    </div>
+
+<% end %>
+
+<%= link_to 'Return', engineerings_path %>

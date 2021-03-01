@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+    <strong>Subject:</strong>
+    <%= @engineering.subject %>
+</p>
+
+<p>
+    <strong>Description:</strong>
+    <%= @engineering.description %>
+</p>
+
+<p>
+    <strong>Units:</strong>
+    <%= @engineering.units %>
+</p>
+
+<p>
+    <strong>Seasonal:</strong>
+    <%= @engineering.seasonal %>
+</p>
+
+<%= link_to 'Specialization', engineering_specializations_path(@engineering) %> |
+<%= link_to 'Edit', edit_engineering_path(@engineering) %> |
+<%= link_to 'Return', engineerings_path %>

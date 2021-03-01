@@ -1,0 +1,38 @@
+<%= form_with(model: engineering) do |form| %>
+    <% if engineering.errors.any? %>
+    <div id="error_explanation">
+        <h2><%= pluralize(engineering.errors.count, "error") %> , please check your inputs </h2>
+
+        <ul>
+            <% engineering.errors.each do |error| %>
+                <li><%= error.full_message %></li>
+            <% end %>
+        </ul>
+    </div>
+    <% end %>
+
+    <div class="field">
+        <%= form.label :subject %>
+        <%= form.text_field :subject %>
+    </div>
+
+    <div class="field">
+        <%= form.label :description %>
+        <%= form.text_area :description %>
+    </div>
+
+    <div class="field">
+        <%= form.label :units %>
+        <%= form.text_field :units%>
+    </div>
+
+    <div id="seasonal-checkbox" class="field">
+        <%= form.check_box :seasonal %>
+        <%= form.label :seasonal %>
+    </div>
+
+    <div class="submit">
+        <%= form.submit "save" %>
+    </div>
+
+<% end %>
